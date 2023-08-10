@@ -43,7 +43,7 @@ $ xxd malware.exe | tail
 286bb8e0: cccc 608a b206 cccc cccc cccc cccc c802  ..`.............
 ```
 
-The entropy is quite low, a lower entropy value indicates low randomness in the data.
+The entropy is quite low (0.03), a lower entropy value indicates low randomness in the data.
 
 ```bash
 $ python3 reducebin.py malware.exe --entropy
