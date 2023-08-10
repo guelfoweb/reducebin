@@ -26,8 +26,8 @@ In case null bytes `00` are added at the end of the malware we can lighten the f
 ```bash
 sed '$ s/\x00*$//' file.exe > file.exe.bin
 ```
-However, in this case there are no null bytes but a series of hexadecimal "CC", they are not arranged consecutively in a single block but randomly interrupted. 
-We can't use the "sed" command like above because we don't know the exact points of the breaks.
+However, in this case there are no null bytes but a series of hexadecimal `CC`, they are not arranged consecutively in a single block but randomly interrupted. 
+We can't use the `sed` command like above because we don't know the exact points of the breaks.
 
 ```bash
 $ xxd malware.exe | tail
