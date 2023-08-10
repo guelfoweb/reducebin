@@ -21,7 +21,7 @@ $ ls -lh malware.exe
 -rw-rw-r-- 1 guelfoweb guelfoweb 647M lug 13 10:33 malware.exe
 ```
 
-In case null bytes `00` are added at the end of the malware, we can lighten the file by removing the null bytes with the `sed` command:
+In case null bytes `00` are added at the end of the malware we can lighten the file by removing the null bytes with the `sed` command:
 
 ```bash
 sed '$ s/\x00*$//' file.exe > file.exe.bin
